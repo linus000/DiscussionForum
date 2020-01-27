@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/view.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Article List</h1>
+<div class="articles">
+{% for article in article %}
+    <div class="article">
+        <a href="{% url 'article:detail' article.title %}">{{article.title}}</a>
+        <p class="author">created by {{article.author}}</p>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

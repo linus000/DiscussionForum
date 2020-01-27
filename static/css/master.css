@@ -1,0 +1,71 @@
+body{
+  background-color: white;
+}
+
+
+#wrapper {
+  width :auto;
+
+ }
+
+#header{
+  border-style: none;
+  background-color: black;
+
+}
+#logo{
+  padding: 15px 20px 20px 20px;
+  float: left;
+}
+#top_menu{
+  float: right;
+  padding: 29.8px 20px 20px 20px;
+  font-size: 1em;
+  color: green;
+ }
+#topbanner{
+  text-align: center;
+  margin-top: 30px;
+}
+h1{
+  color: blue
+}
+#footer{
+  padding-top:10px;
+  text-align: center;
+  font-size: 0.7em;
+  color: red;
+  /* clear: both; */
+  border-top: thin solid blue;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 99.167%
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 99.167%;
+}
+
+.active{
+  padding: 3px 3px;
+  border-radius:15px;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: black;
+  color: gray;
+  font-weight : bold;
+
+}
+/* Style the active class, and buttons on mouse-over */
+.btn{
+  /* background-color: black; */
+  /* color: white; */
+}
+
+/* #header, #top_menu, #logo, #main, #topbanner, body{
+  border-style: solid
+
+} */

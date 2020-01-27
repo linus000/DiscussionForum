@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+{% endblock %}
+{% block content %}
+<div class="detail">
+    <div class="title">
+        Q: {{detailed_article.title|title}}
+        <div class="otherDeatil">
+        {{detailed_article.publish_date}}
+        {{detailed_article.author}}
+    </div>
+    </div>
+    <div class="description">
+        Description: {{detailed_article.description}}
+    </div>
+    <h2>Comments</h2>
+    <div class="comments">
+        {% for comment in comments %}
+        <div class="comment">
+            {{comment.answer}}
+            <div class="owner">
+                {{comment.published_at}}
+                {{comment.owner}}</div>
+        </div>
+    {% endfor %}
+    </div>
+    <form method="get" action="{% url 'comment:create' %}">
+        {% csrf_token %}
+        {{cform.as_p}}
+        <input type="hidden" name="title" value="{{detailed_article.title}}">
+        <input type="submit" value="CreateComment">
+    </form>
+</div>
+{% endblock %}
